@@ -3,7 +3,10 @@ FROM alpine:3.7 as build
 RUN apk --no-cache add nodejs yarn git
 RUN apk --no-cache add python gcc g++ make pkgconfig musl-dev
 
-COPY react-app/package.json react-app/yarn.lock /opt/react-app/
+COPY react-app/package.json \
+     react-app/yarn.lock \
+     react-app/tsconfig.json \
+     /opt/react-app/
 
 RUN cd /opt/react-app/ && yarn install
 
