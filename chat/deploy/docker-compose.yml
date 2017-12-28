@@ -1,0 +1,17 @@
+---
+version: '3'
+services:
+  react-app:
+    image: "${COMPOSE_PROJECT_NAME}-react-app"
+    build:
+      context: ..
+      dockerfile: deploy/docker/react-app.Dockerfile
+    ports:
+      - 5000:5000
+    networks:
+     - ec_default
+networks:
+  ec_default:
+    external: true
+...
+# vim:ts=2:sw=2:et:syn=yaml:

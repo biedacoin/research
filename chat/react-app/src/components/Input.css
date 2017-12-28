@@ -1,0 +1,35 @@
+
+.Input {
+  position: absolute;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+}
+
+.Input > div {
+  text-align: left;
+  font-size: 1.4em;
+}
+
+.Input > div:before {
+  content: "\00BB";
+  margin-left: 4px;
+  margin-right: 8px;
+  color: yellow;
+}
+
+.Input > div > input[type="text"] {
+  width: calc(100% - 32px);
+  margin: 0 auto 0 0;
+  background-color: gray;
+  border: none;
+  font-size: 1.05em;
+  caret-color: red;
+  color: wheat;
+}
+
+.Input > div > input[type="text"]:focus {
+  outline: none;
+}
+
+/* vim:set ts=2 sw=2 et syn=css: */
